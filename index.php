@@ -2,10 +2,6 @@
 require_once('classes/form.php');
 
 $form = new Form();
-
-
-
-
  ?>
 
 <!doctype html>
