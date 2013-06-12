@@ -46,6 +46,7 @@ $form = new Form();
 		<div class="main">
 		<h2>New Zombie</h2>
 		<div class="image">
+			
 		<h3><a href="">upload Image</a></h3>
 			
 		</div>	
