@@ -12,6 +12,11 @@ body{
 	background-image: url(../images/ZombieWalk.jpg);
 }
 
+p, h3{
+	line-height: 150%;
+	padding: 0 0 2em 0;
+}
+
 .header{
 	height: 150px;
 	width: auto;
@@ -65,11 +70,88 @@ body{
 }
 
 .main{
+	position: relative;
 	width:710px;
 	height: 700px;
 	margin: 0;
 	background-color: #fff;
 	float: left;
+	padding: 1em 2em;
+}
+.main h2{
+	margin: 0;
+}
+
+.form{
+	position: absolute;
+	top: 1.6em;
+	right: 2em;
+	width: 320px;
+	height: auto;
+	
+}
+
+.info{
+	position: absolute;
+	top: 2.8em;
+	right: 2em;	
+	width: 320px;
+
+}
+
+.image{
+	float: left;
+	width: 300px;
+	height: 627px;
+	background: #666;
+}
+.image h3{
+	text-align: center;
+	margin: 10em 0 0 0;
+
+}
+
+.image a{
+	text-decoration: none;
+	color: white;
+}
+
+
+
+.form label{
+	display: block;
+}
+
+.form input[type=text], textarea{	
+	outline: 0;
+	min-width: 320px;
+	margin-bottom: 20px;
+}
+.form select{
+	margin: 0 0 1em;
+}
+
+.form textarea{
+	height: 300px;
+	resize: none;
+}
+
+.form input[type=submit],
+.info input[type=submit]{
+	border: 0;
+	background: #eee;
+	color: #333;
+	padding: 10px 20px;
+	font-size: 16px;
+	display: block;
+	cursor: pointer;
+	font-family: Creepster, Arial, sans-serif;
+	font-size: 30px;
+	background: red;
+	color: white;
+	width:7.5em;
+	height: 2em;	
+	letter-spacing: 0.2em;
 }
 
 p{
@@ -91,7 +173,7 @@ p{
 
 #submit{
 	position: absolute;
-	bottom: 0.5em; 
+	bottom: 1em; 
 	right: 0.5em;
 	font-family: Creepster, Arial, sans-serif;
 	font-size: 30px;
