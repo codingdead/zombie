@@ -13,7 +13,9 @@ class Page{
 	public $gender;
 	public $dod;
 	public $price;
+	public $image;
 	private $db;
+
 
 	function __CONSTRUCT($id = 0){
 		# Set the database property to the db we supplied.
@@ -27,7 +29,7 @@ class Page{
 	# This function takes an id, and gets the record from the database with it.
 	function load($id){
 		$result = $this->db->get_one(
-			'name, description, gender, dod, price',
+			'name, description, gender, dod, price, image',
 			'tb_products',
 			'zombie_id = '.$id
 		);
@@ -39,6 +41,7 @@ class Page{
 			$this->gender = $result['gender'];
 			$this->dod = $result['dod'];
 			$this->price = $result['price'];
+			$this->image = $result['image'];
 		}
 
 		return $result;
@@ -56,7 +59,8 @@ class Page{
 					'description' => $this->description,
 					'gender' => $this->gender,
 					'dod' => $this->dod,
-					'price' => $this->price
+					'price' => $this->price,
+					'image' => $this->image
 				)
 			);
 		}
@@ -72,7 +76,8 @@ class Page{
 				'description' => $this->description,
 				'gender' => $this->gender,
 				'dod' => $this->dod,
-				'price' => $this->price
+				'price' => $this->price,
+				'image' => $this->image
 			),
 			array(
 				'zombie_id' => $this->id
