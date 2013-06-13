@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `tb_products` (
   `description` text NOT NULL,
   `gender` varchar(6) NOT NULL,
   `dod` date NOT NULL,
-  `price` double NOT NULL,
+  `price` double NOT NULL,  
   PRIMARY KEY (`zombie_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
