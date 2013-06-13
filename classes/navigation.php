@@ -55,7 +55,7 @@ class Navigation{
 
 	# We need a function to get all the names
 	function get_names(){
-		$names = $this->db->get('zombie_id, name', 'tb_products', 'hidden = 0');
+		$names = $this->db->get('zombie_id, name', 'tb_products');
 		return $names;
 	}
 
