@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Living Dead Adoptions</title>
-	<link rel="stylesheet" href="assets/css/style.css"/>
+	<link rel="stylesheet" href="../assets/css/style.css"/>
 	<link href='http://fonts.googleapis.com/css?family=Creepster' rel='stylesheet' type='text/css'>
 </head>
 <body>

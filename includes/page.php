@@ -2,7 +2,7 @@
 	<?php if($page->id > 0): ?>
 		<h2><?php echo $page->name; ?></h2>
 		<div class="image">
-		<img src="assets/images/<?php echo $page->image; ?>" alt="">			
+		<img src="../assets/images/<?php echo $page->image; ?>" alt="">			
 		</div>
 	<div class="info">		
 		<p><?php echo $page->description; ?></p>

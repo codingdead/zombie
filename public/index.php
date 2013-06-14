@@ -1,9 +1,9 @@
 <?php 
-require_once('classes/form.php');
+require_once('../classes/form.php');
 
 $form = new Form();
 
-require_once('classes/page.php');
+require_once('../classes/page.php');
 
 # If no page number was supplied ...
 if(isset($_GET['zombie']) == false || $_GET['zombie'] == ''){
@@ -18,7 +18,7 @@ if(isset($_GET['zombie']) == false || $_GET['zombie'] == ''){
 # load the page with the id
 $page = new Page($zombie_id);
 
-include('includes/header.php');
-include('includes/sidenav.php');
-include('includes/page.php'); 
-include('includes/footer.php'); ?>
+include('../includes/header.php');
+include('../includes/sidenav.php');
+include('../includes/page.php'); 
+include('../includes/footer.php'); ?>

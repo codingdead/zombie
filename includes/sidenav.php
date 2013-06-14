@@ -1,5 +1,5 @@
 <?php
-	require_once('classes/navigation.php');
+	require_once('../classes/navigation.php');
 	$nav  = new Navigation();
 ?>
 <div class="sidenav">
