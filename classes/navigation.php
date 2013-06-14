@@ -27,28 +27,16 @@ class Navigation{
 	# Since the navigation sidebar needs to be slightly different for the admin,
 	# we need to make a specialised function for it.
 	function make_admin_lists(){
-		$all_of_the_categories = $this->get_categories();
-
-		foreach($all_of_the_categories as $cat){
-			# Make the title of the category a link, so that we can edit it.
-			echo '<h2>';
-			echo '<a href="view_cat.php?id='.$cat['category_id'].'">';
-			echo $cat['name'];
-			echo '</a></h2>';
-
-			$pages = 
-				$this->get_pages_by_category_id($cat['category_id']);
-
-			echo '<ul>';
-			foreach($pages as $page){
-				echo '<li>';
-				echo '<a href="view_page.php?id='.$page['page_id'].
-						'">'.$page['title'].'</a>';
-				echo '</li>';
-			}
-			echo '</ul>';
-		}
-		echo '<a href="new_category.php" class="button">+ New Category</a>';
+		$all_of_the_zombies = $this->get_names();
+					echo '<ul>';
+					foreach($all_of_the_zombies as $zombie){
+						echo '<li>';
+						echo '<a href="index.php?zombie='.$zombie['zombie_id'].
+								'">'.$zombie['name'].'</a>';
+						echo '</li>';			}
+					echo '</ul>';		
+			
+		echo '<form action=""><a href="new_page.php" id="submit" class="sidenav">New Zombie</a>';
 	}
 
 
