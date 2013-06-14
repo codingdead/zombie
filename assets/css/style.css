@@ -108,6 +108,7 @@ p, h3{
 	float: left;
 	width: 300px;
 	height: 627px;
+	background-image: url(../images/dude-zombiegrey.jpg);
 	
 }
 .image h3{
@@ -177,6 +178,9 @@ p{
 }
 
 #submit{
+	padding: 0.5em 0;
+	text-align: center;
+	text-decoration: none;
 	position: absolute;
 	bottom: 1em; 
 	right: 0.5em;
@@ -186,6 +190,7 @@ p{
 	color: white;
 	width:7.5em;
 	height: 2em;
+	border-style: none;
 	
 	letter-spacing: 0.2em;
 
