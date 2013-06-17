@@ -22,8 +22,8 @@ class Form{
 
 
 	# this function makes a new text input tag
-	function text($name, $value = '', $place){
-		return '<input type="text" id="'.$name.'" name="'.$name.'" value="'.$value.'"placeholder="'.$place.'" >';
+	function text($name, $value = '',$place){
+		return '<input type="text" id="'.$name.'" name="'.$name.'" value="'.$value.'"placeholder="'.$place.'">';
 	}
 
 	# this function makes a new hidden input tag
@@ -33,8 +33,8 @@ class Form{
 
 
 	# this function make a select menu
-	function select($name, $options){
-		$html = '<select name="'.$name.'">';
+	function select($name, $value = '', $options){
+		$html = '<select name="'.$name.'" value="'.$value.'">';
 
 		foreach($options as $option){
 			$html .= "<option>$option</option>";
@@ -58,8 +58,5 @@ class Form{
 		name="'.$name.'">'.$value.'</textarea>';
 	}
 	
-	# this function makes a radio button
-	function radio($name, $value = ''){
-			return '<input type="radio" id="'.$name.'" name="'.$name.'" value="'.$value.'">';
-		}
+	
 }

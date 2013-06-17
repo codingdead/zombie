@@ -12,7 +12,7 @@
 		<?php else: ?>
 		<h2>There is no page with that id.</h2>
 		<?php endif; ?>
-		<?php  	echo $form->submit('submit', 'Edit Page');		
-		echo $form->close();?>
+		<?php  	echo '<a href="edit_page.php?id='.$page->id.'" id="button" class="sidenav">Edit Page</a>';?>		
+		
 	</div>
 </div>

@@ -18,7 +18,7 @@ class Navigation{
 			echo '<ul>';
 			foreach($all_of_the_zombies as $zombie){
 				echo '<li>';
-				echo '<a href="index.php?zombie='.$zombie['zombie_id'].
+				echo '<a href="index.php?id='.$zombie['zombie_id'].
 						'">'.$zombie['name'].'</a>';
 				echo '</li>';			}
 			echo '</ul>';		
@@ -31,12 +31,12 @@ class Navigation{
 					echo '<ul>';
 					foreach($all_of_the_zombies as $zombie){
 						echo '<li>';
-						echo '<a href="index.php?zombie='.$zombie['zombie_id'].
+						echo '<a href="index.php?id='.$zombie['zombie_id'].
 								'">'.$zombie['name'].'</a>';
 						echo '</li>';			}
 					echo '</ul>';		
 			
-		echo '<form action=""><a href="new_page.php" id="submit" class="sidenav">New Zombie</a>';
+		
 	}
 
 
