@@ -12,7 +12,7 @@
 		<?php if($products = Cart::get_all()): ?>
 			<?php foreach ($products as $product): ?>
 				<tr class="product">
-					<td class="image"><img src="../assets/images/<?php echo $product['image']; ?>" alt="" width="50"></td>
+					<td class="image"><img src="assets/images/<?php echo $product['image']; ?>" alt="" width="50"></td>
 					<td><a href="index.php?id=<?php echo $product['id']; ?>"><?php echo $product['name']; ?></a></td>
 					<td>$ <?php echo $product['price']; ?></td>
 					<td><?php echo $product['quantity']; ?></td>
