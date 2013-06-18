@@ -14,7 +14,7 @@ echo '<div class="main">';
  	echo '<h2>Update Zombie</h2>';
 
  	echo '<div class="image">';?>
- 	<img src="../../assets/images/<?php echo $page->image; ?>" alt=""> 	
+ 	<img src="../assets/images/<?php echo $page->image; ?>" alt=""> 	
 	<?php echo '<h3><a href="">upload new Image</a></h3>';	
 	echo '</div>';		
 	echo '<div class="form">';
