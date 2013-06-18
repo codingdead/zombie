@@ -1,3 +1,8 @@
+<?php
+require_once('../classes/cart.php'); 
+require_once('../classes/form_static.php');
+require_once('../classes/page.php');
+ ?>
 <div class="main">
 	<?php if($page->id > 0): ?>
 		<h2><?php echo $page->name; ?></h2>
@@ -11,9 +16,13 @@
 		<h3>$<?php echo $page->price; ?></h3>
 		<?php else: ?>
 		<h2>There is no page with that id.</h2>
-		<?php endif; ?>
-		<?php  	echo $form->submit('submit', 'adopt me');
-		echo $form->close();?>
+		<?php endif;
+		form_static::open('add_to_cart.php');
+		form_static::text_input_row('quantity', 'Qty.', 1);
+		form_static::hidden('zombie_id', $page->id);
+		form_static::submit('submit', 'Add to cart');
+		form_static::close();
+		?>
 	</div>
 </div>
 

@@ -26,9 +26,11 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 
 CREATE TABLE IF NOT EXISTS `tb_orderline` (
+  `orderline_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL
+  `quantity` int(11) NOT NULL,
+  PRIMARY KEY (`orderline_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -44,6 +46,7 @@ CREATE TABLE IF NOT EXISTS `tb_orderline` (
 
 CREATE TABLE IF NOT EXISTS `tb_orders` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` datetime NOT NULL,
   PRIMARY KEY (`order_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 

@@ -1,8 +1,6 @@
 <?php 
-require_once('../classes/form.php');
 
-$form = new Form();
-
+require_once('../classes/cart.php');
 require_once('../classes/page.php');
 
 # If no page number was supplied ...

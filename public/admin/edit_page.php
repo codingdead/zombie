@@ -29,13 +29,15 @@ echo '<div class="main">';
 		$genders_array[] = 'Female';
 
 		echo $form->label('gender', 'Gender');
-		echo $form->select('gender', $page->gender, $genders_array);
+		echo $form->select('gender', $genders_array, $page->gender);
 
 		echo $form->label('dod', 'Date of Death');
-		echo $form->text('name', $page->dod, '');
+		echo $form->text('dod', $page->dod, '');
 
 		echo $form->label('price', 'Price');
-		echo $form->text('name', $page->price, '');
+		echo $form->text('price', $page->price, '');
+
+		echo $form->hidden('id', $page->id);
 		
 
 		echo $form->submit('submit', 'Update');
