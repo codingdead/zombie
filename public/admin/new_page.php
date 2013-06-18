@@ -26,7 +26,7 @@ include('../../includes/admin_sidenav.php');
 		$genders_array[] = 'Female';
 
 		echo $form->label('gender', 'Gender');
-		echo $form->select('gender', $genders_array);
+		echo $form->select('gender', $genders_array, '');
 					
 
 			
@@ -36,8 +36,7 @@ include('../../includes/admin_sidenav.php');
 		echo $form->label('price', 'Price');
 		echo $form->text('price','','');			
 
-			// echo $form->hidden('cat', $_GET['id']);
-
+		
 
 		echo $form->submit('submit', 'Create');
 		echo $form->close();

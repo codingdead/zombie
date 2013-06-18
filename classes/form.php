@@ -33,11 +33,15 @@ class Form{
 
 
 	# this function make a select menu
-	function select($name, $value = '', $options){
-		$html = '<select name="'.$name.'" value="'.$value.'">';
-
+	function select($name,  $options, $default = NULL){
+		$html = '<select name="'.$name.'">';
 		foreach($options as $option){
-			$html .= "<option>$option</option>";
+			if($default != NULL && $option == $default){
+				$selected = 'selected';
+			}else{
+				$selected = '';
+			}
+			$html .= "<option $selected>$option</option>";
 		}
 
 		$html .= '</select>';

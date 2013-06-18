@@ -131,7 +131,8 @@ p, h3{
 	display: block;
 }
 
-.form input[type=text], textarea{	
+.form input[type=text],
+textarea{	
 	outline: 0;
 	min-width: 320px;
 	margin-bottom: 20px;
