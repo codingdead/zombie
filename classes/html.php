@@ -18,4 +18,8 @@ class HTML{
 		return $extras;
 	}
 	*/
+
+	public static function br(){
+		echo self::make_tag('<br>');
+	}
 }

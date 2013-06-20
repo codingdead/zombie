@@ -55,7 +55,7 @@ class Form_static extends HTML{
 	}
 
 
-	public static function submit($name, $value, $echo = true){
+	public static function submit($name = 'submit', $value = 'Submit', $echo = true){
 		$tag = self::input('submit', $name, $value);
 
 		if($echo)  	echo $tag;
@@ -73,6 +73,13 @@ class Form_static extends HTML{
 
 	public static function text($name, $value = '', $echo = true){
 	$tag = self::input('text', $name, $value);
+		
+		if($echo)  	echo $tag;
+		else 		return $tag;
+	}
+
+	public static function file($name, $multiple = '', $echo = true){
+		$tag = self::make_tag('<input type="file" name="%s" id="%s" %s>', $name.'[]', $name, $multiple);
 		
 		if($echo)  	echo $tag;
 		else 		return $tag;

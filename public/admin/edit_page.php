@@ -2,6 +2,7 @@
 
 require_once('../../classes/page.php');
 require_once('../../classes/form.php');
+require_once('../../classes/form_static.php');
 
 $page = new Page($_GET['id']);
 $form = new Form();
@@ -14,8 +15,8 @@ echo '<div class="main">';
  	echo '<h2>Update Zombie</h2>';
 
  	echo '<div class="image">';?>
- 	<img src="../assets/images/<?php echo $page->image; ?>" alt=""> 	
-	<?php echo '<h3><a href="">upload new Image</a></h3>';	
+ 	<img src="../assets/images/<?php echo $page->image; ?>" alt="" width="300"> 	
+	<?php	
 	echo '</div>';		
 	echo '<div class="form">';
 	echo $form->open('update_page.php', 'post');
@@ -24,6 +25,10 @@ echo '<div class="main">';
 
 		echo $form->label('description', 'Description');
 		echo $form->textarea('description', $page->description);
+
+		Form_static::label('image', 'Replace Image');
+		Form_static::file('file', 'file');
+
 		$genders_array = array();
 		$genders_array[] = 'Male';
 		$genders_array[] = 'Female';
