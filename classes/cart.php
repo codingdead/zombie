@@ -70,7 +70,20 @@ class Cart{
 		}
 	}
 
-
+	static public function get_id_quantity(){
+		if(isset($_SESSION['cart']) && count($_SESSION['cart']) > 0){
+			foreach($_SESSION['cart'] as $id => $quantity){
+				$temp = new Page($id);
+				$place[] = array(
+					'id' => $temp->id,					
+					'quantity' => $quantity
+				);
+			}
+			return $place;
+		}else{
+			return false;
+		}
+	}
 
 
 	/**

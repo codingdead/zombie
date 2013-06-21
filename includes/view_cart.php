@@ -1,3 +1,11 @@
+<?php 
+require_once('../classes/form.php');
+require_once('../classes/cart.php');
+
+$form = new Form();
+
+ ?>
+
 <div class="main">
 	
 	
@@ -27,9 +35,10 @@
 			<tr>
 				<td colspan="5">There are no products to display</td>
 			</tr>
-		<?php endif; ?>
+		<?php endif;?>
 	</table>
 
 	<a href="clear_cart.php">Clear</a>
 	<a href="../public/index.php">Home</a>
+	
 </div>
