@@ -7,10 +7,9 @@
 	$products = Cart::get_all();
 	$form = new Form();
 	$page = new Page();
+	
 
-	echo $form->open('../includes/save_order.php', 'post');	
-	echo $form->submit('submit', 'Place Order');
-	echo $form->close();
+	
 	
 	
 

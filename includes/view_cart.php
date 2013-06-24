@@ -26,7 +26,15 @@ $form = new Form();
 					<td><?php echo $product['quantity']; ?></td>
 					<td>$ <?php echo $product['price'] * $product['quantity']; ?></td>
 				</tr>
+				
 			<?php endforeach ?>
+			<?php echo $form->open('../includes/save_order.php', 'post');			
+			echo $form->hidden('date', date("Y/m/d H:i:s"));
+			foreach ($products as $product){
+			echo $form->hidden('quantity', $product['quantity']);
+			echo $form->hidden('zombie_id', $product['id']);}
+			echo $form->submit('submit', 'Place Order');
+			echo $form->close(); ?>
 			<tr class="total">
 				<td colspan="4">Grand Total</td>
 				<td>$ <?php echo Cart::total_price(); ?></td>
