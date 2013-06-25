@@ -33,7 +33,7 @@ class Navigation{
 						echo '<li>';
 						echo '<a href="index.php?id='.$zombie['zombie_id'].
 								'">'.$zombie['name'].'</a>';
-						echo '</li>';			}
+						echo '</li>';}
 					echo '</ul>';		
 			
 		
@@ -43,7 +43,9 @@ class Navigation{
 
 	# We need a function to get all the names
 	function get_names(){
-		$names = $this->db->get('zombie_id, name', 'tb_products');
+		$names = $this->db->get('zombie_id, name',
+		 'tb_products WHERE hidden=0'
+		 );		
 		return $names;
 	}
 
@@ -54,7 +56,7 @@ class Navigation{
 		$pages = $this->db->get(
 			'title, page_id',
 			'tb_pages',
-			'category_id = '.$cat_id.' AND hidden=0 ORDER BY page_id ASC'
+			'category_id = '.$cat_id.' AND hidden=0 ORDER BY zombie_id ASC'
 		);
 
 

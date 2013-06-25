@@ -4,6 +4,7 @@
 */
 require_once('database.php');
 
+
 class Order{
 
 	# These are the fields from tb_orders
@@ -80,5 +81,7 @@ class Order{
 			array('order_id' => $this->id)
 		);
 	}
+
+	
 
 }

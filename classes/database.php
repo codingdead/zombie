@@ -53,7 +53,10 @@ class Database{
 	}
 
 
-
+	public function insert_id(){
+		
+		return $this->connection->insert_id;
+	}
 
 
 
@@ -203,6 +206,8 @@ class Database{
 	function query($query_string){
 		return $this->connection->query($query_string);
 	}
+
+	
 
 }
 

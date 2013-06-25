@@ -46,7 +46,7 @@ echo '<div class="main">';
 		
 
 		echo $form->submit('submit', 'Update');
-		// echo '<a href="delete_page.php?id='.$page->id.'">Delete</a>';
+		echo '<a href="delete_page.php?id='.$page->id.'">Delete</a>';
 	echo $form->close();
 echo '</div>';
 echo '</div>';

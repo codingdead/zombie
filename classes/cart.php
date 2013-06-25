@@ -42,7 +42,9 @@ class Cart{
 		unset($_SESSION['cart']);
 	}
 
-
+	static public function remove_item($id){
+		unset($_SESSION['cart'][$id]);
+	}
 
 
 	/**

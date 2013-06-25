@@ -9,7 +9,11 @@
 body{
 	font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
 	margin: 0;
-	background-image: url(../images/ZombieWalk.jpg);
+	background-color: #000;
+	/*background-image: url(../images/zombi_girl.jpg);
+	background-repeat: no-repeat;
+	background-position: right bottom;*/
+	
 }
 
 p, h3{
@@ -37,16 +41,36 @@ p, h3{
 	
 	margin: 0 auto;
 	width:960px;
+	position:relative;
+}
 
+.boy{
+	position:absolute;
+	top: 180px;
+	left:0px;
+}
+
+.girl{
+	position:absolute;
+	top: 180px;
+	right:0px;
 }
 
 .sidenav{
 	height: 700px;
 	width:250px;	
 	margin: 0;
-	background-color: #808080;
+	background-color: #202020;
 	float:left;
 
+}
+
+.sidenav h2{
+	font-family: Creepster, Arial, sans-serif;
+	text-align: right;
+	padding:10px 35px 10px 0px;
+	margin-top:40px;
+	color: #fff;
 }
 
 .sidenav ul {
@@ -56,8 +80,9 @@ p, h3{
 }
 
 .sidenav li {
-	padding:10px 0px 20px 0px;
-	text-align: center;
+	padding:10px 35px 10px 0px;
+	margin:10px 0px 10px 0px;
+	text-align: right;
 }
 
 .sidenav li:hover{
@@ -82,9 +107,11 @@ p, h3{
 	float: left;
 	padding: 1em 2em;
 }
+
 .main h2{
 	margin: 0;
 }
+
 
 .form{
 	position: absolute;
@@ -126,7 +153,6 @@ p, h3{
 }
 
 
-
 .form label{
 	display: block;
 }
@@ -149,14 +175,14 @@ textarea{
 .form input[type=submit],
 .info input[type=submit]{
 	border: 0;
+	margin-top:25px;
 	background: #eee;
 	color: #333;
-	padding: 10px 20px;
-	font-size: 16px;
+	padding: 10px 10px;
+	font-size: 20px;
 	display: block;
 	cursor: pointer;
 	font-family: Creepster, Arial, sans-serif;
-	font-size: 30px;
 	background: red;
 	color: white;
 	width:7.5em;
@@ -174,26 +200,161 @@ p{
 	clear:both;
 	width:960px;
 	height:50px;
-	background-color: #333;
+	background-color: #202020;
 }
 
 .footer p{
 	padding: 1em;
+	color: #fff;
 }
 
 #button{
 	margin: 0.2em 0.4em;
-	padding: 0.5em 0;
+	padding: 10px 10px;
 	text-align: center;
 	text-decoration: none;	
 	font-family: Creepster, Arial, sans-serif;
-	font-size: 30px;
+	font-size: 20px;
 	background: red;
 	color: white;
 	width:7.5em;
 	height: 2em;
 	border-style: none;
-	
 	letter-spacing: 0.2em;
 
 }
+
+/*----------------TOP NAV STYLES ADDED------------------*/
+
+.topnav{
+	width:960px;
+	height:35px;
+	background-color: #000;
+	
+}
+
+.topnav ul{
+	margin: 0 auto;
+	padding:0;
+	text-align: right;
+}
+
+.topnav li{
+	
+	display:inline-block;
+	padding: 10px 20px 15px 20px;
+	font-size: 1em;
+	list-style: none;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.topnav li a{
+	text-decoration: none;
+	color:#000;
+	font-weight: bold;
+}
+
+.topnav li a:hover{
+	color:red;
+	 transition-duration: 1s; 
+	-webkit-transition-duration: 1s; /* Safari */ 
+}
+
+/*----------------CART STYLES ADDED------------------*/
+
+.alert.success{
+	padding: 10px;
+	color: #000;
+	background: #eee;
+	width:150px;
+	border: 2px dotted #000;
+	display: block;
+	margin: 10px 0;
+	text-decoration: none;
+}
+
+.cartmain{
+	max-width: 960px;
+	min-height:800px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.thumb{
+	width: 50px;
+	height: 50px;
+}
+
+
+.col_4{
+	display: block;
+	width: 33.333%;
+	float: left;
+	padding: 20px;
+	color: inherit;
+	text-decoration: none;
+}
+
+table.view_cart{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0;
+}
+
+table.view_cart th{
+	padding: 20px;
+	font-size: 1.5em;
+	font-weight: 300;
+	text-align: left;
+	color: #000;
+}
+
+table.view_cart td{
+	padding: 20px;
+}
+
+table.view_cart td.image{
+	width: 90px;
+}
+
+table.view_cart tr.product{
+	border-top: 1px solid #eee;
+}
+
+table.view_cart tr.total{
+	background: #eee;
+	color: #000;
+	font-size: 1.5em;
+	font-weight: 200;
+}
+
+.cartbutton {
+	margin: 0.4em 1em;
+	padding-top: 0.6em;
+	background: #000;
+	color: #fff;
+	font-size: 1em;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: Helvetica, Arial, sans-serif;
+	display:block;
+	float:right;
+	width:8em;
+	height: 2.5em;
+
+}
+
+.cartbutton:hover {
+	background: red;
+	 transition-duration: 1s; 
+	-webkit-transition-duration: 1s; /* Safari */ 
+}
+
+.cartbutton a{
+	text-decoration: none;
+	color: #fff;
+}
+
