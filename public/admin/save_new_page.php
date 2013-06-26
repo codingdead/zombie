@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
 	$page->gender = $_POST['gender'];
 	$page->dod = $_POST['dod'];
 	$page->price = $_POST['price'];
-	$page->image = $_FILES['file']['name'][0];	
+	$page->image = $_FILES['file']['name'][0];
 
 	$page->save();	
 }

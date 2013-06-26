@@ -6,7 +6,8 @@
 	box-sizing: border-box;
 }
 
-body{
+body,
+html{
 	font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
 	margin: 0;
 	background-color: #000;
@@ -37,11 +38,11 @@ p, h3{
 	margin:0;
 }
 
-.wrapper{
-	
+.wrapper{	
 	margin: 0 auto;
 	width:960px;
 	position:relative;
+
 }
 
 .boy{
@@ -57,8 +58,8 @@ p, h3{
 }
 
 .sidenav{
-	height: 700px;
-	width:250px;	
+	width:250px;
+	height: 1000px;	
 	margin: 0;
 	background-color: #202020;
 	float:left;
@@ -101,7 +102,7 @@ p, h3{
 .main{
 	position: relative;
 	width:710px;
-	height: 700px;
+	height: 1000px;	
 	margin: 0;
 	background-color: #fff;
 	float: left;
@@ -135,7 +136,7 @@ p, h3{
 	float: left;
 	width: 300px;
 	height: 627px;
-	background-image: url(../images/dude-zombiegrey.jpg);
+	background-image: url(../images/ImageZombie.jpg);
 	
 }
 .image h3{
@@ -157,18 +158,18 @@ p, h3{
 	display: block;
 }
 
-.form input[type=text],
+.form input[type=text],input[type=file],
 textarea{	
 	outline: 0;
 	min-width: 320px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 .form select{
 	margin: 0 0 1em;
 }
 
 .form textarea{
-	height: 300px;
+	height: 200px;
 	resize: none;
 }
 
@@ -190,6 +191,8 @@ textarea{
 	letter-spacing: 0.2em;
 }
 
+
+
 p{
 	line-height:150%;
 	font-size:14px;
@@ -197,9 +200,11 @@ p{
 }
 
 .footer{
-	clear:both;
-	width:960px;
+	position: fixed;
+	bottom: 0px;
+	clear:both;	
 	height:50px;
+	width: 2000px;
 	background-color: #202020;
 }
 
@@ -207,6 +212,12 @@ p{
 	padding: 1em;
 	color: #fff;
 }
+
+.sidenav #button{
+	margin-right:35px;
+	float:right;
+}
+
 
 #button{
 	margin: 0.2em 0.4em;
@@ -221,7 +232,21 @@ p{
 	height: 2em;
 	border-style: none;
 	letter-spacing: 0.2em;
+}
 
+.delete{
+	margin: 0;
+	padding: 10px 10px;
+	text-align: center;
+	text-decoration: none;	
+	font-family: Creepster, Arial, sans-serif;
+	font-size: 20px;
+	background: red;
+	color: white;
+	width:7.5em;
+	height: 2em;
+	border-style: none;
+	letter-spacing: 0.2em;
 }
 
 /*----------------TOP NAV STYLES ADDED------------------*/
@@ -321,16 +346,18 @@ table.view_cart td.image{
 
 table.view_cart tr.product{
 	border-top: 1px solid #eee;
+	text-align: left;
 }
+
 
 table.view_cart tr.total{
 	background: #eee;
 	color: #000;
-	font-size: 1.5em;
-	font-weight: 200;
+	font-size: 1.8em;
+	font-weight: 300;
 }
 
-.cartbutton {
+.cartbutton{ 
 	margin: 0.4em 1em;
 	padding-top: 0.6em;
 	background: #000;
@@ -357,4 +384,26 @@ table.view_cart tr.total{
 	text-decoration: none;
 	color: #fff;
 }
+
+.order input[type=submit]{
+	border: 0;
+	margin: 0.4em 1em;
+	background: #eee;
+	color: #333;	
+	font-size: 1em;
+	text-align: center;
+	border-radius: 5px;
+	display: block;
+	float:right;
+	cursor: pointer;
+	font-family: Helvetica, Arial, sans-serif;
+	background: red;
+	color: white;
+	width:8em;
+	height: 2.5em;
+}
+
+
+
+
 

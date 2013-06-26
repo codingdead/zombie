@@ -46,6 +46,7 @@ include('../../includes/admin_sidenav.php');
 		echo $form->close();
 	echo '</div>';
 	echo '</div>';
+	echo '</div>';
 
 
 	include('../../includes/footer.php');

@@ -3,7 +3,8 @@
 	$nav  = new Navigation();
 ?>
 <div class="sidenav">
+	<h2>ZOMBIE SELECTOR</h2>
 	<?php $nav->make_admin_lists(); 
-	echo '<a href="new_page.php" id="button" class="sidenav">New Zombie</a>';?>
+	?>
 	
 </div>

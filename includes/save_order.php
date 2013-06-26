@@ -18,6 +18,7 @@ if(isset($_POST['submit'])){
 		$orderline->quantity = $quantity;
 		$orderline->save();
 	}
+	Cart::clear();
 }
 
 

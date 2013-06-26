@@ -46,9 +46,10 @@ echo '<div class="main">';
 		
 
 		echo $form->submit('submit', 'Update');
-		echo '<a href="delete_page.php?id='.$page->id.'">Delete</a>';
+		echo '</br>';
+		echo '<a href="delete_page.php?id='.$page->id.'" class="delete">Delete Zombie</a>';
 	echo $form->close();
 echo '</div>';
 echo '</div>';
-
+echo '</div>';
 include('../../includes/footer.php');

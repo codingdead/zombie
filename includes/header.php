@@ -7,9 +7,22 @@
 	<link href='http://fonts.googleapis.com/css?family=Creepster' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	<div class="boy">
+		<img src="../public/assets/images/zombi_boy.jpg" alt="">
+	</div>
+		
+	<div class="girl">
+		<img src="../public/assets/images/zombi_girl.jpg" alt="">
+	</div>
+
 	<div class="header">
 		<div class="container">
 			<h1>Living Dead Adoptions</h1>
 		</div>
 	</div>
 	<div class="wrapper">
+		<div class="topnav">
+			<ul>
+				<li><a href="view_cart.php" >View Cart</a></li>
+			</ul>
+		</div>

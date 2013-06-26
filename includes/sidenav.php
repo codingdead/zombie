@@ -3,6 +3,7 @@
 	$nav  = new Navigation();
 ?>
 <div class="sidenav">
-	<?php $nav->make_lists(); 
-	echo '<a href="view_cart.php" id="button" class="sidenav">View Cart</a>';?>
+	<h2>ZOMBIE SELECTOR</h2>
+	<?php $nav->make_lists(); ?>
+	
 </div>
