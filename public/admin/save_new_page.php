@@ -8,13 +8,17 @@ $page = new Page();
 
 # Handle the form submit
 if(isset($_POST['submit'])){
-	Upload::files_to('../assets/images');		
+	if(isset($_FILES['file']['tmp_name'][0])){		
+	$page->image = $_FILES['file']['name'][0];
+	Upload::files_to('../assets/images');
+	}
+			
 	$page->name = $_POST['name'];
 	$page->description = $_POST['description'];
 	$page->gender = $_POST['gender'];
 	$page->dod = $_POST['dod'];
 	$page->price = $_POST['price'];
-	$page->image = $_FILES['file']['name'][0];
+	
 
 	$page->save();	
 }
