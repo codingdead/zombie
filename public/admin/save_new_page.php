@@ -8,7 +8,7 @@ $page = new Page();
 
 # Handle the form submit
 if(isset($_POST['submit'])){
-	if(isset($_FILES['file']['tmp_name'][0])){		
+	if(!empty($_FILES['file']['tmp_name'][0])){		
 	$page->image = $_FILES['file']['name'][0];
 	Upload::files_to('../assets/images');
 	}

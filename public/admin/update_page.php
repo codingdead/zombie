@@ -11,11 +11,15 @@ $page->description = $_POST['description'];
 $page->gender = $_POST['gender'];
 $page->dod = $_POST['dod'];
 $page->price = $_POST['price'];
-if(isset($_FILES['file']['tmp_name'][0])){		
-$page->image = $_FILES['file']['name'][0];
-Upload::files_to('../assets/images');
-}
 $page->update();
+
+
+if(!empty($_FILES['file']['tmp_name'][0])){
+	Upload::files_to('../assets/images');		
+	$page->image = $_FILES['file']['name'][0];
+	$page->save();
+	}
+
 }
 
 		
